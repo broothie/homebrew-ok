@@ -5,24 +5,24 @@
 class Ok < Formula
   desc "A task runner"
   homepage "https://github.com/broothie/ok"
-  version "0.1.17"
+  version "0.1.18"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/broothie/ok/releases/download/v0.1.17/ok_0.1.17_Darwin_x86_64.tar.gz"
-    sha256 "0814dc83d8ddef0dbd928eb2845c96b052bc82741bd8c9b26b90d6d294875803"
+    url "https://github.com/broothie/ok/releases/download/v0.1.18/ok_0.1.18_Darwin_x86_64.tar.gz"
+    sha256 "a9fd2d6f4568e8fbe72f7363027dd32e00cf8bb3d97a3359c1000bee168c3df7"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/broothie/ok/releases/download/v0.1.17/ok_0.1.17_Darwin_arm64.tar.gz"
-    sha256 "90fcc143df1c94d4769216ffccb8831d77164e4520b6849f4d0dcffcb11af8a3"
+    url "https://github.com/broothie/ok/releases/download/v0.1.18/ok_0.1.18_Darwin_arm64.tar.gz"
+    sha256 "903d598ca1ddb3bde8c99e40072f4657560a337ed64e03816683420a9755cfb6"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/broothie/ok/releases/download/v0.1.17/ok_0.1.17_Linux_x86_64.tar.gz"
-    sha256 "e324a028e39bc0eb5d718e31f02a7a2b2724768cdc2afa0720b69649b6c98c06"
+    url "https://github.com/broothie/ok/releases/download/v0.1.18/ok_0.1.18_Linux_x86_64.tar.gz"
+    sha256 "b506edd41e28b95f01221c9f51544db51c1d1f3ed00e1752c5c99c456156d56b"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/broothie/ok/releases/download/v0.1.17/ok_0.1.17_Linux_arm64.tar.gz"
-    sha256 "994d9a79ee20184285d09437dac92c63ea91315e917d538adfac96d103d91391"
+    url "https://github.com/broothie/ok/releases/download/v0.1.18/ok_0.1.18_Linux_arm64.tar.gz"
+    sha256 "daffc767fa3fd2df9e191f68f4c6c4138f696a3f31c5f6a24e00acaa2ad21363"
   end
 
   def install
