@@ -5,24 +5,29 @@
 class Ok < Formula
   desc "A task runner"
   homepage "https://github.com/broothie/ok"
-  version "0.1.20"
+  version "0.1.21"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/broothie/ok/releases/download/v0.1.20/ok_0.1.20_Darwin_x86_64.tar.gz"
-    sha256 "425220583ca184f7dd2c2e849f6fc479c5bdad3034251fd94d49c0585c02049e"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/broothie/ok/releases/download/v0.1.21/ok_0.1.21_Darwin_x86_64.tar.gz"
+      sha256 "809522323ae6e4189666a5c7afe07d10118ec80707b29e7ce0859a820305d431"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/broothie/ok/releases/download/v0.1.21/ok_0.1.21_Darwin_arm64.tar.gz"
+      sha256 "c8519473daa2396c6f3457f941516ee043ff2884c015b54e7f513740f2c7b879"
+    end
   end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/broothie/ok/releases/download/v0.1.20/ok_0.1.20_Darwin_arm64.tar.gz"
-    sha256 "23eda9037530bab6d10a74611d8c43e6fe40a5af9c8c28e3174ce69f91c70777"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/broothie/ok/releases/download/v0.1.20/ok_0.1.20_Linux_x86_64.tar.gz"
-    sha256 "1f6c21e11bf04664b51f8f80a6e27cd32cae94de02194380c4333b7011e2cd1d"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/broothie/ok/releases/download/v0.1.20/ok_0.1.20_Linux_arm64.tar.gz"
-    sha256 "5e24a05d42c0af81876f81b29b1040e8e30ed07b666728a2c34100a2fc82b529"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/broothie/ok/releases/download/v0.1.21/ok_0.1.21_Linux_x86_64.tar.gz"
+      sha256 "421ee5e1feb9c960ad99bc5018d157ed86a9d93f9ec60e95f154c9090593cbaf"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/broothie/ok/releases/download/v0.1.21/ok_0.1.21_Linux_arm64.tar.gz"
+      sha256 "bffdf2d3a6fa722ecc5c90e50fc7b6a651f6ddc599a06fc5967f5cf2d6bb876b"
+    end
   end
 
   def install
