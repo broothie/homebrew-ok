@@ -5,20 +5,20 @@
 class Ok < Formula
   desc "A task runner"
   homepage "https://github.com/broothie/ok"
-  version "0.1.32"
+  version "0.1.33"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/broothie/ok/releases/download/v0.1.32/ok_0.1.32_Darwin_x86_64.tar.gz"
-      sha256 "a0ddec66de8f2e2e8bb70b3cae469ac8afa96fd8ad52993d1b9111c1f234ed3b"
+    if Hardware::CPU.arm?
+      url "https://github.com/broothie/ok/releases/download/v0.1.33/ok_0.1.33_Darwin_arm64.tar.gz"
+      sha256 "65e68f4df9ba58fe5f8d956f604c02471dc609f6d19c708340b1dbc00b81f750"
 
       def install
         bin.install "ok"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/broothie/ok/releases/download/v0.1.32/ok_0.1.32_Darwin_arm64.tar.gz"
-      sha256 "5275a11b61b3d51752c31a6399951794e269f24c319df013b07707967eae1a88"
+    if Hardware::CPU.intel?
+      url "https://github.com/broothie/ok/releases/download/v0.1.33/ok_0.1.33_Darwin_x86_64.tar.gz"
+      sha256 "c57a3085b758470b41c5a70360f55d89a7485309f7b8531036b2701aa395f9f6"
 
       def install
         bin.install "ok"
@@ -27,17 +27,17 @@ class Ok < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/broothie/ok/releases/download/v0.1.32/ok_0.1.32_Linux_x86_64.tar.gz"
-      sha256 "0c2144aa4882e811c6d739cf6328b7ce261ecbb6efbddf5c33e2cfc86b56f40a"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/broothie/ok/releases/download/v0.1.33/ok_0.1.33_Linux_arm64.tar.gz"
+      sha256 "5d3c90847496758676bea2ee097064920c39ebd6e8c4d08410edc254b3568757"
 
       def install
         bin.install "ok"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/broothie/ok/releases/download/v0.1.32/ok_0.1.32_Linux_arm64.tar.gz"
-      sha256 "44a929b47bbee6fdab66df77aeb12db60fbf400dcdd9119fdccf72c27bf82977"
+    if Hardware::CPU.intel?
+      url "https://github.com/broothie/ok/releases/download/v0.1.33/ok_0.1.33_Linux_x86_64.tar.gz"
+      sha256 "d5140bc7fa1c5aa17a2faddfbad3908d35657864e5079953fe73c075090f7454"
 
       def install
         bin.install "ok"
