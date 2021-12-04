@@ -5,20 +5,20 @@
 class Ok < Formula
   desc "A task runner"
   homepage "https://github.com/broothie/ok"
-  version "0.1.34"
+  version "0.1.35"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/broothie/ok/releases/download/v0.1.34/ok_0.1.34_Darwin_arm64.tar.gz"
-      sha256 "ec5ab882970062403b42f55686332a4f57adf3eb5fe4ee96fecffcf9285b997f"
+      url "https://github.com/broothie/ok/releases/download/v0.1.35/ok_0.1.35_Darwin_arm64.tar.gz"
+      sha256 "7c68a2150756583b18c9cc248672feb9b1452b544f8a9ed27f510ece17003549"
 
       def install
         bin.install "ok"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/broothie/ok/releases/download/v0.1.34/ok_0.1.34_Darwin_x86_64.tar.gz"
-      sha256 "682ba3fa9b6318a55db9cf89b5f0d82908ba9bcd2d5a313a331cda3e0523b93c"
+      url "https://github.com/broothie/ok/releases/download/v0.1.35/ok_0.1.35_Darwin_x86_64.tar.gz"
+      sha256 "bd0d7c3fa5a71e19a7c94e001be54e23881b016e18d43037348b3a673174cd10"
 
       def install
         bin.install "ok"
@@ -27,17 +27,17 @@ class Ok < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/broothie/ok/releases/download/v0.1.34/ok_0.1.34_Linux_x86_64.tar.gz"
-      sha256 "7397ce396d0d3f59b36bc25f93a5d53c534932bc26601514e47bfdb8bbf34b8a"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/broothie/ok/releases/download/v0.1.35/ok_0.1.35_Linux_arm64.tar.gz"
+      sha256 "ad66284c3e6ec0d078de3241f5346f44e7ba92d9b683131f320d3396f0804be2"
 
       def install
         bin.install "ok"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/broothie/ok/releases/download/v0.1.34/ok_0.1.34_Linux_arm64.tar.gz"
-      sha256 "0c60afded705a615f224974c0c314b5cf933054a8dceccc421d62402b61eb816"
+    if Hardware::CPU.intel?
+      url "https://github.com/broothie/ok/releases/download/v0.1.35/ok_0.1.35_Linux_x86_64.tar.gz"
+      sha256 "dc8a1b64eb2beb4e36e40e2f5a817169a300484389fc26b26da584416790ba23"
 
       def install
         bin.install "ok"
