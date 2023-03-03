@@ -5,20 +5,20 @@
 class Ok < Formula
   desc "A task runner"
   homepage "https://github.com/broothie/ok"
-  version "0.1.36"
+  version "0.2.1"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/broothie/ok/releases/download/v0.1.36/ok_0.1.36_Darwin_arm64.tar.gz"
-      sha256 "c38f16335df10ec473e69e6eb3f2b3f0d51fd6309d50b9173f5d8878a51ec4d5"
+    if Hardware::CPU.intel?
+      url "https://github.com/broothie/ok/releases/download/v0.2.1/ok_0.2.1_Darwin_x86_64.tar.gz"
+      sha256 "ef66d021369a692083c4463ab3ae1d91b8027976dfe9684e9a36043a7302bb6d"
 
       def install
         bin.install "ok"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/broothie/ok/releases/download/v0.1.36/ok_0.1.36_Darwin_x86_64.tar.gz"
-      sha256 "f36918fcf3d32a9f66ed178f3a3ea3b13a8415c93b45a85a359a7f46e3070ad9"
+    if Hardware::CPU.arm?
+      url "https://github.com/broothie/ok/releases/download/v0.2.1/ok_0.2.1_Darwin_arm64.tar.gz"
+      sha256 "e00bf6e7180d261f827bc86b16569f9ba98674b9154ef65164230149df0549a9"
 
       def install
         bin.install "ok"
@@ -28,16 +28,16 @@ class Ok < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/broothie/ok/releases/download/v0.1.36/ok_0.1.36_Linux_x86_64.tar.gz"
-      sha256 "ced3f6114b3fbe6df1b99be2b2ed13b0288dc796989cd0a206a823647150f822"
+      url "https://github.com/broothie/ok/releases/download/v0.2.1/ok_0.2.1_Linux_x86_64.tar.gz"
+      sha256 "eebe6ae813b253886b7045f70ce64df98fb116976e8943962570d25a61b0bac2"
 
       def install
         bin.install "ok"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/broothie/ok/releases/download/v0.1.36/ok_0.1.36_Linux_arm64.tar.gz"
-      sha256 "639bbcab5941d19cae876d928759c30d427c3b6310f991219bf7b2f7f06050a0"
+      url "https://github.com/broothie/ok/releases/download/v0.2.1/ok_0.2.1_Linux_arm64.tar.gz"
+      sha256 "c9ae08c8b04a572b244ee7d205132e275f0a5c73687fec6a5cb1220f918ae3d6"
 
       def install
         bin.install "ok"
