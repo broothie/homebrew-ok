@@ -5,20 +5,20 @@
 class Ok < Formula
   desc "A task runner"
   homepage "https://github.com/broothie/ok"
-  version "0.2.1"
+  version "0.2.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/broothie/ok/releases/download/v0.2.1/ok_0.2.1_Darwin_x86_64.tar.gz"
-      sha256 "ef66d021369a692083c4463ab3ae1d91b8027976dfe9684e9a36043a7302bb6d"
+      url "https://github.com/broothie/ok/releases/download/v0.2.3/ok_0.2.3_Darwin_x86_64.tar.gz"
+      sha256 "1bd5736e821af65d67814e718cf29d1b6f09c88fedac52b19ffb5f023b613f29"
 
       def install
         bin.install "ok"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/broothie/ok/releases/download/v0.2.1/ok_0.2.1_Darwin_arm64.tar.gz"
-      sha256 "e00bf6e7180d261f827bc86b16569f9ba98674b9154ef65164230149df0549a9"
+      url "https://github.com/broothie/ok/releases/download/v0.2.3/ok_0.2.3_Darwin_arm64.tar.gz"
+      sha256 "a14a6368daa10c571892809bc7d804fd51784397bde855e77548b573cb5fd6c3"
 
       def install
         bin.install "ok"
@@ -28,16 +28,16 @@ class Ok < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/broothie/ok/releases/download/v0.2.1/ok_0.2.1_Linux_x86_64.tar.gz"
-      sha256 "eebe6ae813b253886b7045f70ce64df98fb116976e8943962570d25a61b0bac2"
+      url "https://github.com/broothie/ok/releases/download/v0.2.3/ok_0.2.3_Linux_x86_64.tar.gz"
+      sha256 "cb74336281bdb72c3a2053252f2a0a5396dbe37536ac63c6156b8105675e32e7"
 
       def install
         bin.install "ok"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/broothie/ok/releases/download/v0.2.1/ok_0.2.1_Linux_arm64.tar.gz"
-      sha256 "c9ae08c8b04a572b244ee7d205132e275f0a5c73687fec6a5cb1220f918ae3d6"
+      url "https://github.com/broothie/ok/releases/download/v0.2.3/ok_0.2.3_Linux_arm64.tar.gz"
+      sha256 "a5dcf3f787879ceb40bf4ceb170a73b89288bf0a12288e88eed9672a9872fbcb"
 
       def install
         bin.install "ok"
