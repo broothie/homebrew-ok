@@ -5,20 +5,20 @@
 class Ok < Formula
   desc "A unified task runner that discovers and executes tasks from multiple build tools."
   homepage "https://github.com/broothie/ok"
-  version "0.3.1-rc.2"
+  version "0.3.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/broothie/ok/releases/download/v0.3.1-rc.2/ok_Darwin_x86_64.tar.gz"
-      sha256 "9be31b560605b4dd9df9cfed2ad4d06a981cb977531fa5dcd154dd8841499ac4"
+      url "https://github.com/broothie/ok/releases/download/v0.3.2/ok_Darwin_x86_64.tar.gz"
+      sha256 "be4ed991319b6fe6df47af2c72c22254b39c19346c760531725ed22940bd1bdd"
 
       def install
         bin.install "ok"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/broothie/ok/releases/download/v0.3.1-rc.2/ok_Darwin_arm64.tar.gz"
-      sha256 "099cd181525e238f3203ad2447306fa2e897b5cecbc28b11cf459af90d7e53d9"
+      url "https://github.com/broothie/ok/releases/download/v0.3.2/ok_Darwin_arm64.tar.gz"
+      sha256 "5c95ff6ea5ffd139060734954aba6152c91af0bee16e1e09c75507b49f1edb7f"
 
       def install
         bin.install "ok"
@@ -28,15 +28,15 @@ class Ok < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/broothie/ok/releases/download/v0.3.1-rc.2/ok_Linux_x86_64.tar.gz"
-      sha256 "7945cf75f32bb0c6616944387e4fa5cdf77c0721c616b7cdc4c1bf9f58bd5d3a"
+      url "https://github.com/broothie/ok/releases/download/v0.3.2/ok_Linux_x86_64.tar.gz"
+      sha256 "924866d47eaf57821af27135377a449161b1faa01c2e47a14cb50120d2f3554d"
       def install
         bin.install "ok"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/broothie/ok/releases/download/v0.3.1-rc.2/ok_Linux_arm64.tar.gz"
-      sha256 "6c193eab5dc69f2735b3109f9ae972392e054475521bc71d7ce705ebe4ce0087"
+      url "https://github.com/broothie/ok/releases/download/v0.3.2/ok_Linux_arm64.tar.gz"
+      sha256 "2e56261c9751f76d5c919f2cad21f7bf3acdefa2e8ed193e1aa77b02bf8acfe9"
       def install
         bin.install "ok"
       end
