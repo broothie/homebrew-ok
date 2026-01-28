@@ -5,20 +5,20 @@
 class Ok < Formula
   desc "A unified task runner that discovers and executes tasks from multiple build tools."
   homepage "https://github.com/broothie/ok"
-  version "0.3.2"
+  version "0.3.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/broothie/ok/releases/download/v0.3.2/ok_Darwin_x86_64.tar.gz"
-      sha256 "be4ed991319b6fe6df47af2c72c22254b39c19346c760531725ed22940bd1bdd"
+      url "https://github.com/broothie/ok/releases/download/v0.3.3/ok_Darwin_x86_64.tar.gz"
+      sha256 "3b69372160af10597fc2e34dd271166a2a1949d423534b7c4df6c384d73c0d0b"
 
       def install
         bin.install "ok"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/broothie/ok/releases/download/v0.3.2/ok_Darwin_arm64.tar.gz"
-      sha256 "5c95ff6ea5ffd139060734954aba6152c91af0bee16e1e09c75507b49f1edb7f"
+      url "https://github.com/broothie/ok/releases/download/v0.3.3/ok_Darwin_arm64.tar.gz"
+      sha256 "43c91d986c92b479cd8b47a2e8e5eeedfd16f412cbec3adf6540790bb51e75e3"
 
       def install
         bin.install "ok"
@@ -28,15 +28,15 @@ class Ok < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/broothie/ok/releases/download/v0.3.2/ok_Linux_x86_64.tar.gz"
-      sha256 "924866d47eaf57821af27135377a449161b1faa01c2e47a14cb50120d2f3554d"
+      url "https://github.com/broothie/ok/releases/download/v0.3.3/ok_Linux_x86_64.tar.gz"
+      sha256 "8ef100135ac019ef7afc33a0ba7746f96d4e537ca69a9cd5a59bf2d716d484bb"
       def install
         bin.install "ok"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/broothie/ok/releases/download/v0.3.2/ok_Linux_arm64.tar.gz"
-      sha256 "2e56261c9751f76d5c919f2cad21f7bf3acdefa2e8ed193e1aa77b02bf8acfe9"
+      url "https://github.com/broothie/ok/releases/download/v0.3.3/ok_Linux_arm64.tar.gz"
+      sha256 "28b02a14c69dd01c56fca6f2d5b2456e33367ece68b1e3be93516704cc8e20b2"
       def install
         bin.install "ok"
       end
